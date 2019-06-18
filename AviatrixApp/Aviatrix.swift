@@ -18,7 +18,7 @@ class Aviatrix {
     var maxFuel = 5000
     var fuelLevel = 5000.0
     var milesPerGallon = 0.4
-    var fuelCost = 1.79
+    var fuelCost = 0.0
     
     init(authorName : String) {
         author = authorName
@@ -36,6 +36,7 @@ class Aviatrix {
     func refuel() -> Double {
         gallonsToPurchase = 5000.0 - fuelLevel
         fuelLevel = 5000.0
+        fuelCost = data.fuelPrices[location]! * Double(gallonsToPurchase)
         return gallonsToPurchase
     }
     
