@@ -31,11 +31,10 @@ class Aviatrix {
     }
     
     func flyTo(destination : String) {
-        
+        location = destination
     }
     
     func distanceTo(target : String, currentLocation : String) -> Int {
-        location = currentLocation
         return data.knownDistances[currentLocation]![target]!
     }
     
