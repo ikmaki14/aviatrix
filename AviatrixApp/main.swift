@@ -13,9 +13,9 @@ func gauges(myPlane : Aviatrix) {
     print(" ")
     print("| Running:  | ✅")
     print("| Location:  | \(myPlane.location)")
-//    print("| Distance:  | \(myPlane.distanceTraveled) miles")
+    print("| Distance:  | \(myPlane.distanceTraveled) miles")
 //    print("| Fuel:      | \(myPlane.fuelLevel) gallons")
-//    print("| Max Fuel:  | \(myPlane.maxFuel) gallons")
+    print("| Max Fuel:  | \(myPlane.maxFuel) gallons")
 //    print("| MPG:       | \(myPlane.milesPerGallon)")
 //    print("| Fuel Bill: | \(myPlane.fuelCost)")
 }
@@ -35,7 +35,7 @@ func fly(myPlane : Aviatrix) {
     let response = Int(readLine()!)
     var desiredLocation = ""
     
-    if response! >= 0 && response! < 4 {
+    if response! >= 0 && response! < 5 {
         desiredLocation = myPlane.knownDestinations()[response!]
         
         print("🛫 Preparing for takeoff...")
