@@ -31,8 +31,12 @@ class Aviatrix {
         return running
     }
     
-    func refuel() {
-        
+    var gallonsToPurchase = 0.0
+    
+    func refuel() -> Double {
+        gallonsToPurchase = 5000.0 - fuelLevel
+        fuelLevel = 5000.0
+        return gallonsToPurchase
     }
     
     func flyTo(destination : String) {
